@@ -1,0 +1,20 @@
+{
+	"name": "node-web-server",
+	"version": "1.0.0",
+	"description": "Node.js Web Server tutorial",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server",
+		"dev": "nodemon server"
+	},
+	"keywords": [],
+	"author": "Shishir Neupane",
+	"license": "ISC",
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	},
+	"dependencies": {
+		"date-fns": "^2.28.0",
+		"uuid": "^8.3.2"
+	}
+}
