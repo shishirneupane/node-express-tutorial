@@ -22,8 +22,17 @@ const logEvents = async (message, logName) => {
 			logItem
 		);
 	} catch (err) {
-		console.error(err);
+		console.log(err);
 	}
 };
 
-module.exports = logEvents;
+const logger = (req, res, next) => {
+	logEvents(
+		`${req.method}\t${req.headers.origin}\t${req.url}`,
+		"reqLog.txt"
+	);
+	console.log(`${req.method} ${req.path}`);
+	next();
+};
+
+module.exports = { logger, logEvents };
